@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+</head>
+<body>
+<section class="about" id="about">
+    <div class="max-width">
+        <h2 class="title">Openhab</h2>
+        <div class="about-content">
+            <div class="column left">
+                <img src="images/OpenHAB-logo.png" style="max-width: 100%; max-height: 100%" alt="">
+            </div>
+            <div class="column right">
+                <p>In deze activiteit heb ik een Raspberry Pi opgezet die fungeert als “home controller”. We hebben al deels automatisering in huis met niko home control (NHC). Er zijn aan dit systeem echter bepaalde zaken die mij storen. De interface is niet al te gebruiksvriendelijk en het grootste nadeel is dat de connectiviteit met andere spelers zeer beperkt is. Niko werkt samen met zijn partners, maar als je nu net een device van een andere fabrikant wilt integreren, dan lukt dat niet. Via Openhab kan je via code of via de UI apparaten laten samenkomen op 1 systeem.. <br>
+                </p>
+                <!--<a href="#">Download CV</a> -->
+            </div>
+            <div class="column left">
+                <p>We starten bij de Raspberry Pi. Deze fungeert als server waarop alle signalen gaan binnenkomen. Speciaal hiervoor bestaat er Openhabian. Je kan het flashen op een micro-SD kaart en vervolgens in de Raspberry Pi steken. Wanneer je deze aansluit begint de server zich automatisch te installeren. Na een goed half uur is hij bereikbaar via de localhost nl. openhabian:8080. Je kan hier je wachtwoord instellen en vanaf dan kan je ook aan de netwerkmappen. Ten slotte kan je ook in de configuratie zelf duiken door connectie te maken via SSH.</p>
+            </div>
+            <div class="column right">
+                <img src="images/pi.png">
+            </div>
+            <div class="column left">
+                <img src="images/overview.png" style="max-width: 100%; max-height: 100%" alt="">
+            </div>
+            <div class="column right">
+                <p>
+                    Ik ben de activiteit gestart met de 2.5 versie van Openhab. In de loop van het project zijn hier enkele updates aan te pas gekomen en uiteindelijk hebben ze de 3.0 versie gereleased. Dit zorgde voor heel wat problemen in bestaande systemen zoals bij mij. Enkele bindings werkten niet meer omdat er problemen ontstaan waren met de beveiliging.<br><br>
+                    In Openhab kan je kiezen om alles via een UI in te stellen of anderzijds via de files zelf. In Opehab 2.5 heb ik alles via Visual Studio Code opgezet, maar vermits de 3.0 versie toch verschillend in elkaar zit, heb ik daar via de UI alles ingesteld. Hier is het wel mogelijk om in de UI zelf ook de code aan te passen.<br><br>
+                    Uiteindelijk heb ik een binding opgezet met mijn Niko Home Control installatie en alles toegewezen aan de locatie in huis. Verder heb ik ook mijn 2 Bose Soundtouch systemen gekoppeld aan mijn keuken en badkamer. Alles is zo gemakkelijk toegankelijk vanuit de mobiele Openhab applicatie. In de vorige versie had ik mijn sproeiersysteem gekoppeld, maar met de upgrade is deze binding niet meer functioneel. Verschillende developers zijn daarmee bezig om deze binding terug werkende te krijgen en beschikbaar te stellen aan iedereen. Vaak wordt er beroep gedaan op API’s van de betreffende apparaten, maar als de fabrikant soms aanpassingen doet, moet de binding in Openhab dus ook bijgewerkt worden.<br><br>
+                </p>
+                <!--<a href="#">Download CV</a> -->
+            </div>
+            <div class="column left">
+                <p>De grote sterkte van Openhab is dat je ook regels kan schrijven. Zo heb ik bijvoorbeeld het IP-adres van mijn gsm gekoppeld. Wanneer na 21:00 uur de status van dat IP-adres van Off naar On gaat, dan gaat de lamp aan de achterdeur aan. Omdat ik wel eens vergeetachtig ben en de lamp niet altijd uitzet, heb ik ervoor gezorgd dat de lamp in dit geval na 5 minuten weer uit gaat. Nog een ander voorbeeld is dat ik de buitenverlichting aan de inkom een kwartier  voor zonsondergang laat aanspringen, om dan weer te doven om 23:30 uur.<br><br>
+                    Ik kan Openhab zeker aanraden, al is het wel een must kennis te hebben van servers/programmeertaal/API’s,.. . Ik ga het ook zeker verder blijven gebruiken om nog andere apparaten te koppelen.
+                </p>
+           </div>
+            <div class="column right">
+                <img src="images/rules.png">
+            </div>
+        </div>
+        <a href="index.html">Terug naar het portfolio</a>
+    </div>
+</section>
+</body>
+</html>

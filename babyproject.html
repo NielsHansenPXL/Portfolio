@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
+</head>
+<body>
+<section class="about" id="about">
+    <div class="max-width">
+        <h2 class="title">Baby Project</h2>
+        <div class="about-content">
+            <div class="column left">
+                <img src="images/babyhome.png" style="max-width: 100%; max-height: 100%" alt="">
+            </div>
+            <div class="column right">
+            <p>
+                Voor dit project ben ik te werk gegaan met Vue.JS. De bedoeling was om een website te bouwen waarop familie en vrienden konden inloggen om een gokje te wagen op de, toen nog, aankomende baby. Het was voor mij belangrijk dat er kon ingelogd worden onder eigen accounts, zodat de gokjes ook altijd bij dezelfde persoon in de database terecht konden komen. <br><br>
+                Om dit op een vrij eenvoudige manier af te handelen, heb ik beroep gedaan op firebase. Hierin zit een module voor logins te beheren. Vanuit de UI van firebase kan de administrator ook gemakkelijk volgen welke accounts werden aangemaakt, hij kan accounts verwijderen of zelfs paswoorden resetten.<br><br>
+                Na een succesvolle login komt de bezoeker op de homepage terecht. Deze heb ik fraai proberen op te maken met behulp van Bootstrap-Vue. Hierin zitten een aantal kant-en-klare templates, zoals de 2 cards die ik om de homepage gebruikt hebt.<br>
+                Neem alvast een kijkje : <a href="https://nielshansenpxl.github.io/babyproject/#/login?redirect=%2F">BabyBet</a> <br><br><br>
+
+            </p>
+                <!--<a href="#">Download CV</a> -->
+            </div>
+            <div class="column left">
+                <p>In Vue.JS heb ik voor de navigatie gebruik gemaakt van de Router. Voor de state te managen van de ingelogde user heb ik gekozen voor de Store.<br><br>
+                    Wanneer de bezoeker zijn kans gaat wagen, komt hij op een soort form-page terecht. Hierin dienen alle vragen beantwoord te worden en werd er ook op verschillende velden validatie voorzien. Achteraf heb ik gemerkt dat ik nog meet validatieregels het moeten schrijven, want het gewicht werd in verschillende formaten doorgegeven.<br><br>
+                    Wanneer de bezoeker zijn gokje doorstuurt, gaat dit naar een opgezette firebase real-time database. Hierin wordt voor elke gebruiker een nieuwe node gemaakt. Per gebruiker komen er dan weer nieuwe nodes bij telkens er gegokt wordt. Deze aparte nodes krijgen automatisch ook een aparte ID.<br><br><br>
+                </p>
+            </div>
+            <div class="column right">
+                <img src="images/firebase.png">
+            </div>
+            <div class="column left">
+                <img src="images/bets.PNG" style="max-width: 100%; max-height: 100%" alt="">
+            </div>
+            <div class="column right">
+            <p>
+                Omdat er vaak de vraag kwam “wat heb ik vorige keer ook alweer gegokt”, is er ook een aparte tab ‘mijn gokjes” voorzien. Hierin maak ik terug connectie met firebase en doormiddel van een GET kan ik alle gokjes van de ingelogde gebruiker ophalen en tonen.<br><br>
+                Uiteindelijk, na 150 gokjes, kwam ik tot het besef dat ik niet elk gokje apart wou nakijken. Ik ben dan maar aan de slag gegaan in Visual Studio om een console applicatie te schrijven in .Net. De console applicatie moest dan connectie maken met Firebase om alles op te halen. Na de geboorte zou ik enkel nog gewicht, lengte en geboortedatum moeten kunnen invullen om de winnaar uit de console te laten rollen. Dit was makkelijker gezegd dan gedaan. Het grote probleem was de inrichting van de database. Ik had beter voor elke gokje een aparte node aangemaakt, met de gebruiker in een field, in plaats van nu eerst de gebruiker te moeten oproepen om dan door te gaan naar posts. <br>Pas op dit punt konden de fields aangeroepen worden. Niets is onmogelijk en uiteindelijk kreeg ik de data toch op een juiste manier geparst.<br><br><br>
+
+            </p>
+                <!--<a href="#">Download CV</a> -->
+            </div>
+            <div class="column left">
+                <p>
+                    In .Net heb ik hiervoor gebruik gemaakt van een nuget package genaamd newtonsoft.json.Linq. Hier kan je aan de hand van LINQ queries doorheen JSON files speuren. Verder heb ik de package van Firesharp gebruikt om de connectie met de realtime database te maken.
+                </p>
+            </div>
+            <div class="column right">
+                <img src="images/console.jpg.png">
+            </div>
+        </div>
+        <a href="index.html">Terug naar het portfolio</a>
+    </div>
+</section>
+</body>
+</html>
